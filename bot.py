@@ -18,7 +18,7 @@ t = time.localtime()
 current_time = time.strftime("%H:%M:%S", t)
 
 @client.event
-async def on_member_join(ctx, member):
+async def on_member_join(member):
     channel = discord.utils.get(member.guild.channels, name="chat")
     now = member.joined_at.strftime("%a, %d %B %Y, %I:%M %p")
     embed = discord.Embed(title=f"<:ak:811040807850737715> **Welcome To Feds**", description=f"・ welcome {member.mention}\n・ read <#811039803528708097>\n・ be active\n・ invite ur friends\n・ {member.guild.member_count} members", color=0x010000)
